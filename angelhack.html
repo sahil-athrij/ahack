@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Busser</title>
+    <style>
+     .right{
+           margin-left: 1400px;
+           height: 100px;
+         margin-top: 300px;
+            }
+     img{position: fixed;
+         top: 0px;}
+     .header {
+        width: 100%;
+        position: fixed;
+        top: 0;
+        bottom: auto;
+        background-color: white;
+    }
+    .outer {
+        position: relative;
+        height: 100px;
+    }
+    .outer .header {
+        position: absolute;
+        bottom: 0;
+        z-index: 2;
+        top: auto;
+    }
+    .content {
+        height: 500px;
+
+    }
+        h1 {
+            color: black;
+            font-size: 80px;
+            margin-bottom: 0.5px;
+            font-family: Calibri;
+        }
+        p { background-color: transparent;
+            border-bottom: 5px solid black;
+            margin-left: 800px;
+            font: "Courier New";
+            font-size: 25px;
+            color: black;
+            font-family: Calibri;
+
+        }
+     .button1 {
+         display: inline-block;
+         border-radius: 4px;
+         background-color: yellow;
+         margin-top: 100px;
+         border: none;
+         color: black;
+         text-align: center;
+         font-size: 20px;
+         padding: 10px;
+         width: 140px;
+         transition: all 0.5s;
+         cursor: pointer;
+         margin: 2px;
+     }
+
+     .button1 span {
+         cursor: pointer;
+         display: inline-block;
+         position: relative;
+         transition: 0.5s;
+     }
+
+     .button1 span:after {
+         content: '\00bb';
+         position: absolute;
+         opacity: 0;
+         top: 0;
+         right: -10px;
+         transition: 0.5s;
+     }
+
+     .button1:hover span {
+         padding-right: 20px;
+     }
+
+     .button1:hover span:after {
+         opacity: 1;
+         right: 0;
+     }
+     .button {
+         display: inline-block;
+         border-radius: 4px;
+         background-color: #f4511e;
+         border: none;
+         color: #FFFFFF;
+         text-align: center;
+         font-size: 28px;
+         padding: 20px;
+         width: 200px;
+         height: 100px;
+         transition: all 0.5s;
+         cursor: pointer;
+         margin: 5px;
+     }
+
+     .button span {
+         cursor: pointer;
+         display: inline-block;
+         position: relative;
+         transition: 0.5s;
+     }
+
+     .button span:after {
+         content: '\00bb';
+         position: absolute;
+         opacity: 0;
+         top: 0;
+         right: -20px;
+         transition: 0.5s;
+     }
+
+     .button:hover span {
+         padding-right: 25px;
+     }
+
+     .button:hover span:after {
+         opacity: 1;
+         right: 0;
+     }
+     .frame1 {
+         height: 600px;
+         width: 100%;
+     }
+
+    </style>
+</head>
+<body>
+<div class="header">
+    <img src="bus1.png">
+<h1   align= "center"  >BUSSER</h1>
+    <div class="outer">
+        <div class="header">
+            <p>MAKING YOUR LIFE EASIER EVERYDAY</p>
+        </div>
+    </div>
+</div>
+    <div class="right">
+        <button onclick=d()  class="button1" style="vertical-align:middle"><span> Driver </span></button>
+    </div>
+    <center>
+        <div class="content">
+            <button onclick=p() class="button" style="vertical-align:middle"><span> Track Bus </span></button>
+            <button onclick=a() class="button" style="vertical-align:middle"><span> Track Ambulance </span></button>
+
+        </div>
+        <script>
+            function p() {document.querySelector(".frame1").setAttribute("src", "geolocation.html");
+
+            }
+            function a() {document.querySelector(".frame1").setAttribute("src", "geolocation.html");
+
+
+            }
+            function d() {
+                window.location = "drive.html";
+            }
+        </script>
+        <div class="outer">
+        <iframe class="frame1"    align="bottom" ;
+                frameborder="0" ;></iframe>
+        </div>
+</center>
+
+</body>
+</html>
